@@ -10,6 +10,7 @@ import net.jspiner.cherrypick.ui.main.search.SearchFragment;
 
 public class MainPagerAdapter extends FragmentPagerAdapter {
 
+    private final int PAGE_SIZE = 3;
     private final int PAGE_RECIPE = 0;
     private final int PAGE_COMBINE = 1;
     private final int PAGE_SEARCH = 2;
@@ -34,6 +35,6 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return PAGE_SIZE;
     }
 }

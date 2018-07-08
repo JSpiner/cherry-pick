@@ -30,5 +30,21 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, Contract.Pre
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        init();
+    }
+
+    private void init() {
+        initViews();
+    }
+
+    private void initViews() {
+        initPager();
+    }
+
+    private void initPager() {
+        binding.pager.setAdapter(
+                new MainPagerAdapter(getSupportFragmentManager())
+        );
     }
 }
