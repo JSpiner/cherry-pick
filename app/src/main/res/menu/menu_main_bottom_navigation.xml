@@ -5,20 +5,20 @@
     <item
         android:id="@+id/action_one"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_info"
+        android:icon="@drawable/icon_menu_recipe"
         android:title="레시피"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_two"
-        android:icon="@android:drawable/ic_dialog_info"
+        android:icon="@drawable/icon_menu_combine"
         android:title="조합"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_three"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_info"
+        android:icon="@drawable/icon_menu_search"
         android:title="검색"
         app:showAsAction="ifRoom" />
 
