@@ -1,5 +1,6 @@
 package net.jspiner.cherrypick.ui.main.recipe;
 
+import android.content.Context;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
@@ -16,7 +17,9 @@ public class RecipeViewHolder extends BaseViewHolder<CardRecipeBinding, Recipe> 
 
     @Override
     public void setData(Recipe recipe) {
-        Glide.with(binding.getRoot().getContext())
+        Context context = binding.getRoot().getContext();
+
+        Glide.with(context)
                 .load(recipe.imageUrl)
                 .into(binding.image);
         binding.title.setText(recipe.title);
