@@ -1,8 +1,17 @@
 package net.jspiner.cherrypick.ui.splash;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+
 import net.jspiner.cherrypick.R;
 import net.jspiner.cherrypick.databinding.ActivitySplashBinding;
 import net.jspiner.cherrypick.ui.base.BaseActivity;
+import net.jspiner.cherrypick.ui.main.MainActivity;
+
+import java.util.concurrent.TimeUnit;
+
+import io.reactivex.Completable;
 
 public class SplashActivity extends BaseActivity<ActivitySplashBinding, Contract.Presenter>
         implements Contract.View {
@@ -15,5 +24,13 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, Contract
     @Override
     protected Contract.Presenter createPresenter() {
         return new SplashPresenter(this);
+    }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Completable.timer(1000 * 2, TimeUnit.MILLISECONDS)
+                .subscribe(() -> MainActivity.startActivity(this));
     }
 }
