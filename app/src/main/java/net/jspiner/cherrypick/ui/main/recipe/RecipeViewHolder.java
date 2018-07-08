@@ -17,7 +17,8 @@ public class RecipeViewHolder extends BaseViewHolder<CardRecipeBinding, Recipe> 
     @Override
     public void setData(Recipe recipe) {
         Glide.with(binding.getRoot().getContext())
-                .load("https://cdn.liquor.com/wp-content/uploads/2013/03/04113537/dry-martini-7200-720-recipe.jpg")
+                .load(recipe.imageUrl)
                 .into(binding.image);
+        binding.title.setText(recipe.title);
     }
 }
