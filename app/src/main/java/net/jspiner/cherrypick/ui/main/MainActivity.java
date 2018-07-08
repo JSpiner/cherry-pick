@@ -24,7 +24,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, Contract.Pre
 
     @Override
     protected Contract.Presenter createPresenter() {
-        return null;
+        return new MainPresenter(this);
     }
 
     @Override
