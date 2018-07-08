@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.jspiner.cherrypick">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".CherryPickApplication"
         android:icon="@mipmap/ic_launcher"
