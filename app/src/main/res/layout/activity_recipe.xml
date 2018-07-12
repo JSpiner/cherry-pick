@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -19,6 +20,101 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:transitionName="@string/transition_cocktail_image" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="칵테일"
+                        android:textColor="@android:color/black"
+                        android:textSize="12dp"
+                        app:fontPath="@string/font_thin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-8dp"
+                        android:text="진토닉"
+                        android:textColor="@android:color/black"
+                        android:textSize="24dp"
+                        app:fontPath="@string/font_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="소개"
+                        android:textColor="@android:color/black"
+                        android:textSize="12dp"
+                        app:fontPath="@string/font_thin" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="진토닉은 인도가 대영제국에 의해 지배될 당시, 1800년대 말 경에 인도에서 시작됐다. 영국군대는 말라리아를 퇴치하기 위해 키니네(quinine)라고 불리는 약을 매일 1회분씩 복용키로 되었으나 이 약이 매우 써서 설탕과 물을 타서 복용하였다. 이후 그 혼합물이 '인디언 키니네' 혹은 '인디언 토익 워터'로 알려졌으며 그것은 영국군들이 그들의 기호 술인 진의 쓴맛을 약하게 하는데 사용되었다."
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+                        app:fontPath="@string/font_light" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="기법"
+                        android:textColor="@android:color/black"
+                        android:textSize="12dp"
+                        app:fontPath="@string/font_thin" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="빌드 그리고 젓기"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+                        app:fontPath="@string/font_light" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="글라스"
+                        android:textColor="@android:color/black"
+                        android:textSize="12dp"
+                        app:fontPath="@string/font_thin" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="콜린스(롱 드링크) 글라스"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+                        app:fontPath="@string/font_light" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="재료"
+                        android:textColor="@android:color/black"
+                        android:textSize="12dp"
+                        app:fontPath="@string/font_thin" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="진 : 45ml\n라임즙 : 15ml\n토닉워터 : 적당량"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+                        app:fontPath="@string/font_light" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
