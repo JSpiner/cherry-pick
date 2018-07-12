@@ -62,6 +62,8 @@ public class RecipeActivity extends BaseActivity<ActivityRecipeBinding, Contract
         Glide.with(getBaseContext())
                 .load(recipe.imageUrl)
                 .into(binding.recipe);
+
+        binding.back.setOnClickListener(__ -> finish());
     }
 
 }
