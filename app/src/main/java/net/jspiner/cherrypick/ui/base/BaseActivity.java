@@ -73,6 +73,17 @@ public abstract class BaseActivity<B extends ViewDataBinding, P extends BasePres
         }
     }
 
+    protected void setStatusBarTranslucent() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            );
+            window.setStatusBarColor(Color.argb(30, 0, 0, 0));
+        }
+
+    }
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
