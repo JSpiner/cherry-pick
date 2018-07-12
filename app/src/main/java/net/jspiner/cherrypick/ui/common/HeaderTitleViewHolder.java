@@ -11,9 +11,11 @@ public class HeaderTitleViewHolder extends BaseViewHolder<CardHeaderTitleBinding
     public HeaderTitleViewHolder(String title, ViewGroup parent, int layoutResId) {
         super(parent, layoutResId);
 
-        StaggeredGridLayoutManager.LayoutParams layoutParams =
-                (StaggeredGridLayoutManager.LayoutParams) binding.getRoot().getLayoutParams();
-        layoutParams.setFullSpan(true);
+        if (binding.getRoot().getLayoutParams() instanceof StaggeredGridLayoutManager.LayoutParams) {
+            StaggeredGridLayoutManager.LayoutParams layoutParams =
+                    (StaggeredGridLayoutManager.LayoutParams) binding.getRoot().getLayoutParams();
+            layoutParams.setFullSpan(true);
+        }
 
         binding.title.setText(title);
     }
