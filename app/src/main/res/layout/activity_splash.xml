@@ -23,6 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="칵테일 레시피 No.1"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="25dp"
                 app:fontPath="@string/font_bold" />
 
@@ -31,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-12dp"
                 android:text="Cherry-Pick"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="15dp" />
 
         </LinearLayout>
