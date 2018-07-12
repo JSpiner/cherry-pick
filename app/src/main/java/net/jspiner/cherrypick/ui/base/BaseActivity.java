@@ -1,5 +1,6 @@
 package net.jspiner.cherrypick.ui.base;
 
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.graphics.Color;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import io.reactivex.subjects.BehaviorSubject;
 
 public abstract class BaseActivity<B extends ViewDataBinding, P extends BasePresenterInterface> extends AppCompatActivity {
@@ -69,6 +71,11 @@ public abstract class BaseActivity<B extends ViewDataBinding, P extends BasePres
             binding.getRoot().setSystemUiVisibility(flags);
             getWindow().setStatusBarColor(Color.WHITE);
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
 }
