@@ -1,6 +1,7 @@
 package net.jspiner.cherrypick.ui.splash;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
@@ -30,7 +31,11 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, Contract
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setStatusBarColor(Color.BLACK);
         Completable.timer(1000 * 2, TimeUnit.MILLISECONDS)
-                .subscribe(() -> MainActivity.startActivity(this));
+                .subscribe(() -> {
+                    MainActivity.startActivity(this);
+                    finish();
+                });
     }
 }
