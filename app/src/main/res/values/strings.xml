@@ -7,4 +7,5 @@
     <string name="font_bold">fonts/spoqa_bold.ttf</string>
 
     <string name="transition_cocktail_image">transition_cocktail_image</string>
+    <string name="transition_cocktail_name">transition_cocktail_name</string>
 </resources>

@@ -44,6 +44,7 @@
                         android:text="진토닉"
                         android:textColor="@android:color/black"
                         android:textSize="24dp"
+                        android:transitionName="@string/transition_cocktail_name"
                         app:fontPath="@string/font_bold" />
 
                     <TextView

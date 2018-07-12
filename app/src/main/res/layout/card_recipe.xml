@@ -41,7 +41,9 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="4dp"
                     android:textColor="#3f3f3f"
-                    android:textSize="15dp" />
+                    android:textSize="15dp"
+                    android:transitionName="@string/transition_cocktail_name"
+                    app:fontPath="@string/font_bold" />
 
             </LinearLayout>
 

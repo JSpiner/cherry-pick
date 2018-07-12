@@ -2,6 +2,9 @@ package net.jspiner.cherrypick.ui.main.recipe;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.util.Pair;
+import android.support.v4.view.ViewCompat;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
@@ -20,9 +23,14 @@ public class RecipeViewHolder extends BaseViewHolder<CardRecipeBinding, Recipe> 
             RecipeActivity.startActivity(
                     (Activity) binding.getRoot().getContext(),
                     lastData,
-                    binding.image
+                    createPair(binding.image),
+                    createPair(binding.title)
             );
         });
+    }
+
+    private Pair<View, String> createPair(View view) {
+        return new Pair<>(view, ViewCompat.getTransitionName(view));
     }
 
     @Override
