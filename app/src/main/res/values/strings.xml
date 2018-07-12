@@ -5,4 +5,6 @@
     <string name="font_light">fonts/spoqa_light.ttf</string>
     <string name="font_regular">fonts/spoqa_regular.ttf</string>
     <string name="font_bold">fonts/spoqa_bold.ttf</string>
+
+    <string name="transition_cocktail_image">transition_cocktail_image</string>
 </resources>

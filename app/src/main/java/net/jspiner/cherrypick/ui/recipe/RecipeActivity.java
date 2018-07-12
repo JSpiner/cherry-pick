@@ -1,11 +1,16 @@
 package net.jspiner.cherrypick.ui.recipe;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 
 import net.jspiner.cherrypick.R;
@@ -19,10 +24,16 @@ public class RecipeActivity extends BaseActivity<ActivityRecipeBinding, Contract
 
     private Recipe recipe;
 
-    public static void startActivity(Context context, @NonNull Recipe recipe) {
-        Intent intent = new Intent(context, RecipeActivity.class);
+    public static void startActivity(Activity activity, @NonNull Recipe recipe, ImageView imageView) {
+        Intent intent = new Intent(activity, RecipeActivity.class);
         intent.putExtra(IntentKey.INTENT_KEY_RECIPE, new Gson().toJson(recipe));
-        context.startActivity(intent);
+
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                activity,
+                imageView,
+                ViewCompat.getTransitionName(imageView)
+        );
+        activity.startActivity(intent, options.toBundle());
     }
 
     @Override
@@ -47,6 +58,10 @@ public class RecipeActivity extends BaseActivity<ActivityRecipeBinding, Contract
                 getIntent().getStringExtra(IntentKey.INTENT_KEY_RECIPE),
                 Recipe.class
         );
+
+        Glide.with(getBaseContext())
+                .load(recipe.imageUrl)
+                .into(binding.recipe);
     }
 
 }

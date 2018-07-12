@@ -1,5 +1,6 @@
 package net.jspiner.cherrypick.ui.main.recipe;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.ViewGroup;
 
@@ -17,8 +18,9 @@ public class RecipeViewHolder extends BaseViewHolder<CardRecipeBinding, Recipe> 
 
         binding.root.setOnClickListener(__ -> {
             RecipeActivity.startActivity(
-                    binding.getRoot().getContext(),
-                    lastData
+                    (Activity) binding.getRoot().getContext(),
+                    lastData,
+                    binding.image
             );
         });
     }
