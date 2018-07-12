@@ -20,5 +20,7 @@
 
         <activity android:name=".ui.main.MainActivity"/>
 
+        <activity android:name=".ui.recipe.RecipeActivity"/>
+
     </application>
 </manifest>
