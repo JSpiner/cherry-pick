@@ -17,7 +17,7 @@ public class CombineAdapter extends BaseAdapter {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         switch (viewType) {
             case VIEW_TYPE_HEADER:
-                return new HeaderTitleViewHolder("재료를 고르면,\n레시피를 알려줄게요!", parent, R.layout.card_header_title);
+                return new HeaderTitleViewHolder("가진 재료를 고르면,\n가능한 조합을 알려줄게요!", parent, R.layout.card_header_title);
             default:
                 throw new IllegalArgumentException("존재할 수 없는 type : " + viewType);
         }
