@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#ffffff"
@@ -21,7 +21,30 @@
                 android:clipToPadding="false"
                 android:paddingTop="24dp" />
 
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_requir" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="아래 버튼을 눌러\n재료를 추가해주세요!"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
 
         <LinearLayout
             android:id="@+id/bottom_sheet"
@@ -73,9 +96,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
-                app:queryBackground="@null"
                 android:elevation="6dp"
                 app:iconifiedByDefault="false"
+                app:queryBackground="@null"
                 app:queryHint="ex) 럼, 진, 보드카, 우유">
 
             </android.support.v7.widget.SearchView>
