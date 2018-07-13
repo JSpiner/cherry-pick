@@ -17,6 +17,7 @@ public class CombineFragment extends BaseFragment<FragmentCombineBinding, Contra
         implements Contract.View {
 
     private CombineAdapter combineAdapter;
+    private MaterialAdapter materialAdapter;
     private BottomSheetBehavior bottomSheetBehavior;
 
     public static CombineFragment newInstance() {
@@ -49,6 +50,8 @@ public class CombineFragment extends BaseFragment<FragmentCombineBinding, Contra
     private void initViews() {
         initRecyclerView();
         initBottomSheet();
+
+        addDummyData();
     }
 
     private void initRecyclerView() {
@@ -57,8 +60,6 @@ public class CombineFragment extends BaseFragment<FragmentCombineBinding, Contra
                 new LinearLayoutManager(getContext())
         );
         binding.recyclerView.setAdapter(combineAdapter);
-
-        addDummyData();
     }
 
     private void initBottomSheet() {
@@ -66,6 +67,10 @@ public class CombineFragment extends BaseFragment<FragmentCombineBinding, Contra
         binding.addMaterial.setOnClickListener(__ -> {
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
         });
+
+        materialAdapter = new MaterialAdapter();
+        binding.materialRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        binding.materialRecyclerView.setAdapter(materialAdapter);
 
     }
 
@@ -75,5 +80,11 @@ public class CombineFragment extends BaseFragment<FragmentCombineBinding, Contra
             dummyData.add(new Object());
         }
         combineAdapter.addAll(dummyData);
+
+        dummyData = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            dummyData.add(new Object());
+        }
+        materialAdapter.addAll(dummyData);
     }
 }
