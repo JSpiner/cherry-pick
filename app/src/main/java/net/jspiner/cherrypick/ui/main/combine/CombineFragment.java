@@ -17,6 +17,7 @@ public class CombineFragment extends BaseFragment<FragmentCombineBinding, Contra
         implements Contract.View {
 
     private CombineAdapter combineAdapter;
+    private BottomSheetBehavior bottomSheetBehavior;
 
     public static CombineFragment newInstance() {
         CombineFragment fragment = new CombineFragment();
@@ -61,7 +62,11 @@ public class CombineFragment extends BaseFragment<FragmentCombineBinding, Contra
     }
 
     private void initBottomSheet() {
-        BottomSheetBehavior.from(binding.bottomSheet);
+        bottomSheetBehavior = BottomSheetBehavior.from(binding.bottomSheet);
+        binding.addMaterial.setOnClickListener(__ -> {
+            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+        });
+
     }
 
     private void addDummyData() {
