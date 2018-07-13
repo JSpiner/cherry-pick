@@ -69,6 +69,7 @@ public class RecipeActivity extends BaseActivity<ActivityRecipeBinding, Contract
                 .load(recipe.imageUrl)
                 .into(binding.recipe);
 
+        binding.cocktailName.setText(recipe.title);
         binding.back.setOnClickListener(__ -> finish());
     }
 
