@@ -3,6 +3,7 @@ package net.jspiner.cherrypick.ui.main.combine;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 
@@ -46,6 +47,7 @@ public class CombineFragment extends BaseFragment<FragmentCombineBinding, Contra
 
     private void initViews() {
         initRecyclerView();
+        initBottomSheet();
     }
 
     private void initRecyclerView() {
@@ -56,6 +58,10 @@ public class CombineFragment extends BaseFragment<FragmentCombineBinding, Contra
         binding.recyclerView.setAdapter(combineAdapter);
 
         addDummyData();
+    }
+
+    private void initBottomSheet() {
+        BottomSheetBehavior.from(binding.bottomSheet);
     }
 
     private void addDummyData() {
