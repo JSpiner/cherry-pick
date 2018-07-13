@@ -30,6 +30,7 @@
             android:background="@android:color/white"
             android:elevation="6dp"
             android:orientation="vertical"
+            android:paddingBottom="8dp"
             app:behavior_hideable="false"
             app:behavior_peekHeight="?attr/actionBarSize"
             app:layout_behavior="@string/bottom_sheet_behavior">
@@ -63,18 +64,21 @@
 
             </FrameLayout>
 
-            <android.support.v7.widget.SearchView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:iconifiedByDefault="false"
-                app:queryHint="ex) 럼, 진, 보드카, 우유">
-
-            </android.support.v7.widget.SearchView>
-
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/material_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
+
+            <android.support.v7.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:queryBackground="@null"
+                android:elevation="6dp"
+                app:iconifiedByDefault="false"
+                app:queryHint="ex) 럼, 진, 보드카, 우유">
+
+            </android.support.v7.widget.SearchView>
 
         </LinearLayout>
 
